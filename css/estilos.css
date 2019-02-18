@@ -1,11 +1,10 @@
-.bntColor {
-	background-color: #555555;
+.btnColor {
+	background-color: #44C8E2;
 	color: #ffffff;
-	margin-bottom: 20px;
 	transition: all .3s;
 }
 
-.bntColor:hover {
+.btnColor:hover {
 	background-color: #999999;
 	color: #ffffff;
 }
@@ -17,4 +16,17 @@
 
 .close {
 	color: #ffffff;
+}
+
+.info-gral {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.info-servicio {
+	background-color: transparent!important;
+	border: none!important;
+	margin: 5px auto;
 }

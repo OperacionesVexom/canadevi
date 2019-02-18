@@ -119,7 +119,7 @@
 				<form method="post" onsubmit="return registroUsuario()">
 					<div class="form-group">
 						<div class="input-group">
-							<input type="text" class="form-control" id="regNombre" name="regNombre" placeholder="Nombre" required>
+							<input type="text" class="form-control" id="regNombre" name="regNombre" placeholder="Nombre(s)" required>
 						</div>
 					</div>
 

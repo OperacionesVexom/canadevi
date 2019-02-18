@@ -31,14 +31,6 @@
 
 					if($respuesta == "ok") {
 						/*=============================================
-						ACTUALIZAR NOTIFICACIONES NUEVOS USUARIOS
-						=============================================*/
-						$traerNotificaciones = ControladorNotificaciones::ctrMostrarNotificaciones();
-						$nuevoUsuario = $traerNotificaciones["nuevosUsuarios"] + 1;
-
-						ModeloNotificaciones::mdlActualizarNotificaciones("notificaciones", "nuevosUsuarios", $nuevoUsuario);
-
-						/*=============================================
 						VERIFICACIÓN CORREO ELECTRÓNICO
 						=============================================*/
 						date_default_timezone_set("America/Mexico_City");
@@ -503,5 +495,25 @@
 							</script>';
 				}
 			}
+		}
+
+		/*=============================================
+		MOSTRAR USUARIO
+		=============================================*/
+		static public function ctrMostrarUsuario($item, $valor) {
+			$tabla = "usuarios";
+			$respuesta = ModeloUsuarios::mdlMostrarUsuario($tabla, $item, $valor);
+
+			return $respuesta;
+		}
+
+		/*=============================================
+		ACTUALIZAR USUARIO
+		=============================================*/
+		static public function ctrActualizarUsuario($id, $item, $valor) {
+			$tabla = "usuarios";
+			$respuesta = ModeloUsuarios::mdlActualizarUsuario($tabla, $id, $item, $valor);
+
+			return $respuesta;
 		}
 	}

@@ -30,3 +30,49 @@
 	border: none!important;
 	margin: 5px auto;
 }
+
+.contVerificacion {
+	margin-top: 80px;
+	justify-content: center;
+}
+
+.verificarCorreo h3 {
+	font-size: 100px;
+	text-shadow: 4px 4px 1px #dadada;
+}
+
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+@media (min-width:1200px) {
+	
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+@media (max-width:1199px) and (min-width:992px) {
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+@media (max-width:991px) and (min-width:768px) {
+	
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media (max-width:767px) {
+	.verificarCorreo h3 {
+		font-size: 70px;
+		text-shadow: 2px 2px 1px #dadada;
+	}
+
+	.contVerificacion {
+		margin-top: 40px;
+		margin-bottom: 30px;
+	}
+}

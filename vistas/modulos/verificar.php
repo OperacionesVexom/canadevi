@@ -26,7 +26,7 @@ VERIFICAR
 	<div class="row contVerificacion">
 		<div class="col-xs-12 text-center verificarCorreo">
 			<?php
-				if (!$usuarioVerificado) {
+				if ($usuarioVerificado) {
 					echo '<h3>Gracias</h3>
 						<h2><small>¡Hemos verificado tú correo electrónico, ya puedes ingresar al sistema!</small></h2>
 						<br>

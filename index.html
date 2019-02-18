@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/estilos.css">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<title>DEMO</title>
+</head>
+
+<body>
+	<div class="navbar-dark fixed-top">
+		<nav class="navbar navbar-expand-md container text-sm-center">
+			<a class="navbar-brand" href="index.html">
+				<!-- <img src="img/logo.png"> -->
+				HOLA MUNDO
+			</a>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto mr-5">
+					<li class="nav-item active">
+						<a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
+					</li>
+		
+					<li class="nav-item">
+						<a class="nav-link" href="#">Nosotros</a>
+					</li>
+		
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contacto</a>
+					</li>
+				</ul>
+
+				<span class="navbar-text text-white">
+					<ul class="navbar-nav ml-auto mr-5">
+						<li class="nav-item">
+							<a class="nav-link" href="#modalIngreso" data-toggle="modal">Ingresa</a>
+						</li>
+			
+						<li class="nav-item active">
+							<a class="nav-link" href="#">|</a>
+						</li>
+			
+						<li class="nav-item">
+							<a class="nav-link" href="#modalRegistro" data-toggle="modal">Regístrate</a>
+						</li>
+					</ul>
+				</span>
+			</div>
+		</nav>
+	</div>
+	
+	<!--=====================================
+	IMAGEN PRINCIPAL
+	======================================-->
+	<div class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img class="d-block w-100" src="img/1.jpg" alt="Imagen principal">
+				
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Nombre información</h5>
+					<p>Descripción información | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nam, commodi non quo perferendis dolorem voluptas eaque quis. Cum qui facilis velit similique quasi, perspiciatis.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--=====================================
+	INFORMACIÓN DE LA PLATAFORMA
+	======================================-->
+	<div class="container">
+		<div class="row">
+			<div class="info-gral my3">
+				<div class="info-servicio">
+					<img src="https://pngimage.net/wp-content/uploads/2018/06/informacion-png-2.png" class="img-fluid">
+				</div>
+
+				<div class="info-servicio">
+					<img src="https://pngimage.net/wp-content/uploads/2018/06/informacion-png-2.png" class="img-fluid">
+				</div>
+
+				<div class="info-servicio">
+					<img src="https://pngimage.net/wp-content/uploads/2018/06/informacion-png-2.png" class="img-fluid">
+				</div>
+
+				<div class="info-servicio">
+					<img src="https://pngimage.net/wp-content/uploads/2018/06/informacion-png-2.png" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--=====================================
+	VENTANA MODAL PARA EL INGRESO
+	======================================-->
+	<div class="modal fade modalFormulario" id="modalIngreso" role="dialog">
+		<div class="modal-content modal-dialog">
+			<div class="modal-header backModal">
+				<h3 class="backColor">Ingreso</h3>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<div class="modal-body modalTitulo">
+				<form method="post">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="email" class="form-control" id="ingEmail" name="ingEmail" placeholder="Correo Electrónico" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<input type="password" class="form-control" id="ingPassword" name="ingPassword" placeholder="Contraseña" required>
+						</div>
+					</div>
+					
+					<input type="submit" class="btn btn-default backColor btn-block btnIngreso" value="ENVIAR">
+					<br>
+					<center>
+						<a href="#modalPassword" data-dismiss="modal" data-toggle="modal">¿Olvidaste tu contraseña?</a>
+					</center>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--=====================================
+	VENTANA MODAL PARA OLVIDO DE CONTRASEÑA
+	======================================-->
+	<div class="modal fade modalFormulario" id="modalPassword" role="dialog">
+		<div class="modal-content modal-dialog">
+			<div class="modal-header backModal">
+				<h3 class="backColor">Solicitud de nueva contraseña</h3>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<div class="modal-body modalTitulo">
+				<form method="post">
+					<label class="text-muted">Escribe el correo electrónico con el que estás registrado y te enviaremos una nueva contraseña:</label>
+
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-envelope"></i>
+							</span>
+							<input type="email" class="form-control" id="passEmail" name="passEmail" placeholder="Correo Electrónico" required>
+						</div>
+					</div>					
+					<input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--=====================================
+	VENTANA MODAL PARA EL REGISTRO
+	======================================-->
+	<div class="modal fade modalFormulario" id="modalRegistro" role="dialog">
+		<div class="modal-content modal-dialog">
+			<div class="modal-header backModal">
+				<h3 class="backColor">Registro</h3>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<div class="modal-body modalTitulo">
+				<form method="post">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" id="regNombre" name="regNombre" placeholder="Nombre" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" id="regApPat" name="regApPat" placeholder="Apellido paterno" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" id="regAPMat" name="regAPMat" placeholder="Apellido materno" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<input type="email" class="form-control" id="regEmail" name="regEmail" placeholder="Correo Electrónico" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<input type="tel" class="form-control" id="regTel" name="regTel" placeholder="Teléfono empresa" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<input type="tel" class="form-control" id="regCelular" name="regCelular" placeholder="Teléfono celular" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<select class="form-control input-lg" id="regEmpresa" name="regEmpresa">
+								<option value="">Seleciona empresa</option>
+								<option value="na">No aplica</option>
+								<option value="nvaEmpresa">Mi empresa no está registrada</option>
+								<option value="empresa1">Empresa1</option>
+								<option value="empresa2">Empresa2</option>
+								<option value="empresa3">Empresa3</option>
+								<option value="empresa4">Empresa4</option>
+								<option value="empresa5">Empresa5</option>
+								<option value="Vendedor"></option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<input type="password" class="form-control" id="regPassword" name="regPassword" placeholder="Contraseña" required>
+						</div>
+					</div>
+					
+					<input type="submit" class="btn btn-default backColor btn-block btnRegistro" value="ENVIAR">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--=====================================
+	VENTANA MODAL PARA EL REGUSTRO DE EMPRESA
+	======================================-->
+	<div class="modal fade modalFormulario" id="modalEmpresa" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header backModal">
+					<h4 class="modal-title">Registro empresa</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+					<form role="form" method="post" enctype="multipart/form-data">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control" id="regNombreEmp" name="regNombreEmp" placeholder="Nombre empresa" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control" id="regNombreContEmp" name="regNombreContEmp" placeholder="Nombre contacto empresa" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="input-group">
+								<input type="tel" class="form-control" id="regTelEmp" name="regTelEmp" placeholder="Teléfono empresa" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="input-group">
+								<input type="email" class="form-control" id="regEmailEmp" name="regEmailEmp" placeholder="Correo Electrónico empresa" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+						<div class="panel"><small>Subir logo empresa</small></div>
+						<hr>
+						<input type="file" id="nvoLogoEmp" name="nvoLogoEmp">
+						<p class="text-muted">Peso máximo de la imagen 2MB</p>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" class="img-thumbnail previsualizar" width="100px">
+						</div>
+
+						<input type="submit" class="btn btn-default backColor btn-block btnEmpresa" value="Registrar">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

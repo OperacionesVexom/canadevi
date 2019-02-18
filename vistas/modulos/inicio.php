@@ -194,29 +194,7 @@
 
 					<div class="form-group">
 						<div class="input-group">
-							<input type="tel" class="form-control" id="regTel" name="regTel" placeholder="Teléfono empresa" required>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="input-group">
-							<input type="tel" class="form-control" id="regCelular" name="regCelular" placeholder="Teléfono celular" required>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="input-group">
-							<select class="form-control input-lg" id="regEmpresa" name="regEmpresa">
-								<option value="">Seleciona empresa</option>
-								<option value="na">No aplica</option>
-								<option value="nvaEmpresa">Mi empresa no está registrada</option>
-								<option value="empresa1">Empresa1</option>
-								<option value="empresa2">Empresa2</option>
-								<option value="empresa3">Empresa3</option>
-								<option value="empresa4">Empresa4</option>
-								<option value="empresa5">Empresa5</option>
-								<option value="Vendedor"></option>
-							</select>
+							<input type="tel" class="form-control" id="regCelular" name="regCelular" placeholder="Teléfono" required>
 						</div>
 					</div>
 

@@ -1,6 +1,6 @@
 	<div class="navbar-dark fixed-top">
 		<nav class="navbar navbar-expand-md bg-dark container">
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="<?php echo $url; ?>">
 				<!-- <img src="img/logo.png"> -->
 				HOLA
 			</a>
@@ -12,7 +12,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto mr-5">
 					<li class="nav-item active">
-						<a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="<?php echo $url; ?>">Inicio <span class="sr-only">(current)</span></a>
 					</li>
 		
 					<li class="nav-item">
@@ -24,8 +24,8 @@
 					</li>
 				</ul>
 
-				<span class="navbar-text text-white">
-					<ul class="navbar-nav ml-auto mr-5">
+				<!-- <span class="navbar-text text-white">
+					<ul class="navbar-nav ml-auto mr-5 loginSing">
 						<li class="nav-item">
 							<a class="nav-link" href="#modalIngreso" data-toggle="modal">Ingresa</a>
 						</li>
@@ -36,6 +36,30 @@
 			
 						<li class="nav-item">
 							<a class="nav-link" href="#modalRegistro" data-toggle="modal">Regístrate</a>
+						</li>
+					</ul>
+				</span> -->
+
+				<span class="navbar-text text-white">
+					<ul class="navbar-nav ml-auto mr-5 loginSing">
+						<li class="nav-item">
+							<img src="<?php echo $url; ?>vistas/img/usuarios/default/user-def.png" width="40px">
+						</li>
+			
+						<li class="nav-item active d-none d-md-block">
+							<a class="nav-link" href="#">|</a>
+						</li>
+			
+						<li class="nav-item">
+							<a class="nav-link" href="<?php echo $url; ?>perfil">Ver perfil</a>
+						</li>
+
+						<li class="nav-item active d-none d-md-block">
+							<a class="nav-link" href="#">|</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="<?php echo $url; ?>salir">Salir</a>
 						</li>
 					</ul>
 				</span>

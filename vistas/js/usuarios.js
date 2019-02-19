@@ -1,4 +1,56 @@
 /*=============================================
+CAPTURA DE RUTA
+=============================================*/
+var rutaActual = location.href;
+
+$(".btnIngreso, .facebook, .google").click(function() {
+	localStorage.setItem("rutaActual", rutaActual);
+})
+
+/*=============================================
+FORMATEAR LOS IPUNT
+=============================================*/
+$("input").focus(function() {
+	$(".alert").remove();
+})
+
+/*=============================================
+VALIDAR EMAIL REPETIDO
+=============================================*/
+var validarEmailRepetido = false;
+
+$("#regEmail").change(function() {
+	var email = $("#regEmail").val();
+
+	var datos = new FormData();
+	datos.append("validarEmail", email);
+
+	$.ajax({
+		url:rutaOculta+"ajax/usuarios.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		success:function(respuesta) {
+			if (respuesta == "false") {
+				$(".alert").remove();
+				validarEmailRepetido = false;
+			} else {
+				var modo = JSON.parse(respuesta).modo;
+				
+				if (modo == "directo") {
+					modo = "este formulario";
+				}
+
+				$("#regEmail").parent().after('<div class="alert alert-danger"><strong>ERROR:</strong> El correo electrónico ya existe en la base de datos.</div>')
+					validarEmailRepetido = true;
+			}
+		}
+	})
+})
+
+/*=============================================
 VALIDAR EL REGISTRO DE USUARIO
 =============================================*/
 function registroUsuario() {

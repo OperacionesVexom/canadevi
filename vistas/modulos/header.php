@@ -29,11 +29,11 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#modalIngreso" data-toggle="modal">Ingresa</a>
 						</li>
-			
+
 						<li class="nav-item active">
 							<a class="nav-link" href="#">|</a>
 						</li>
-			
+
 						<li class="nav-item">
 							<a class="nav-link" href="#modalRegistro" data-toggle="modal">Regístrate</a>
 						</li>
@@ -45,11 +45,11 @@
 						<li class="nav-item">
 							<img src="<?php echo $url; ?>vistas/img/usuarios/default/user-def.png" width="40px">
 						</li>
-			
+
 						<li class="nav-item active d-none d-md-block">
 							<a class="nav-link" href="#">|</a>
 						</li>
-			
+
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo $url; ?>perfil">Ver perfil</a>
 						</li>
@@ -141,7 +141,7 @@
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 
-			<div class="modal-body modalTitulo">
+			<div class="modal-body">
 				<form method="post">
 					<div class="form-group">
 						<div class="input-group">
@@ -180,7 +180,7 @@
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 
-			<div class="modal-body modalTitulo">
+			<div class="modal-body">
 				<form method="post">
 					<label class="text-muted">Escribe el correo electrónico con el que estás registrado y te enviaremos una nueva contraseña:</label>
 
@@ -197,7 +197,7 @@
 						$password = new ControladorUsuarios();
 						$password -> ctrOlvidoPassword();
 					?>
-					
+
 					<input type="submit" class="btn btn-default btnColor btn-block" value="ENVIAR">
 				</form>
 			</div>
@@ -214,7 +214,7 @@
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 
-			<div class="modal-body modalTitulo">
+			<div class="modal-body">
 				<form method="post" onsubmit="return registroUsuario()">
 					<div class="form-group">
 						<div class="input-group">

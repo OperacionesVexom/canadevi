@@ -3,7 +3,7 @@ CAPTURA DE RUTA
 =============================================*/
 var rutaActual = location.href;
 
-$(".btnIngreso, .facebook, .google").click(function() {
+$(".btnIngreso").click(function() {
 	localStorage.setItem("rutaActual", rutaActual);
 })
 

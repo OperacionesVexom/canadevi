@@ -191,7 +191,13 @@
 							</span>
 							<input type="email" class="form-control" id="passEmail" name="passEmail" placeholder="Correo Electrónico" required>
 						</div>
-					</div>					
+					</div>
+
+					<?php
+						$password = new ControladorUsuarios();
+						$password -> ctrOlvidoPassword();
+					?>
+					
 					<input type="submit" class="btn btn-default btnColor btn-block" value="ENVIAR">
 				</form>
 			</div>

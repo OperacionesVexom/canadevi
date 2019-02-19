@@ -40,7 +40,7 @@
 					</ul>
 				</span> -->
 
-				<span class="navbar-text text-white">
+				<!-- <span class="navbar-text text-white">
 					<ul class="navbar-nav ml-auto mr-5 loginSing">
 						<li class="nav-item">
 							<img src="<?php echo $url; ?>vistas/img/usuarios/default/user-def.png" width="40px">
@@ -61,6 +61,70 @@
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo $url; ?>salir">Salir</a>
 						</li>
+					</ul>
+				</span> -->
+
+				<span class="navbar-text text-white">
+					<ul class="navbar-nav ml-auto mr-5 loginSing">
+						<?php
+							if (isset($_SESSION["validarSesion"])) {
+								if ($_SESSION["validarSesion"] == "ok") {
+									if ($_SESSION["foto"] != "") {
+											echo '<li class="nav-item">
+														<img src="'.$url.$_SESSION["foto"].'" width="40px">
+													</li>
+
+													<li class="nav-item active d-none d-md-block">
+														<a class="nav-link" href="#">|</a>
+													</li>
+
+													<li class="nav-item">
+														<a class="nav-link" href="'.$url.'perfil">Ver perfil</a>
+													</li>
+
+													<li class="nav-item active d-none d-md-block">
+														<a class="nav-link" href="#">|</a>
+													</li>
+
+													<li class="nav-item">
+														<a class="nav-link" href="'.$url.'salir">Salir</a>
+													</li>';
+										} else {
+											echo '<li class="nav-item">
+														<img src="'.$url.'vistas/img/usuarios/default/user-def.png" width="40px">
+													</li>
+
+													<li class="nav-item active d-none d-md-block">
+														<a class="nav-link" href="#">|</a>
+													</li>
+
+													<li class="nav-item">
+														<a class="nav-link" href="'.$url.'perfil">Ver perfil</a>
+													</li>
+
+													<li class="nav-item active d-none d-md-block">
+														<a class="nav-link" href="#">|</a>
+													</li>
+
+													<li class="nav-item">
+														<a class="nav-link" href="'.$url.'salir">Salir</a>
+													</li>';
+										}
+								}
+							} else {
+								echo '<li class="nav-item">
+											<a class="nav-link" href="#modalIngreso" data-toggle="modal">Ingresar</a>
+										</li>
+							
+										<li class="nav-item active">
+											<a class="nav-link" href="#">|</a>
+										</li>
+							
+										<li class="nav-item">
+											<a class="nav-link" href="#modalRegistro" data-toggle="modal">Regístrate</a>
+										</li>';
+							}
+						?>
 					</ul>
 				</span>
 			</div>
@@ -90,6 +154,11 @@
 							<input type="password" class="form-control" id="ingPassword" name="ingPassword" placeholder="Contraseña" required>
 						</div>
 					</div>
+
+					<?php
+						$ingreso = new ControladorUsuarios();
+						$ingreso -> ctrIngresoUsuario();
+					?>
 					
 					<input type="submit" class="btn btn-default btnColor btn-block btnIngreso" value="ENVIAR">
 					<br>

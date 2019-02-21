@@ -47,7 +47,7 @@
 		if (isset($_GET["ruta"])) {
 			$rutas = explode("/", $_GET["ruta"]);
 
-			if ($rutas[0] == "inicio" || $rutas[0] == "verificar" || $rutas[0] == "salir") {
+			if ($rutas[0] == "inicio" || $rutas[0] == "verificar" || $rutas[0] == "perfil" || $rutas[0] == "evento" || $rutas[0] == "salir") {
 				include "modulos/".$rutas[0].".php";
 			} else {
 				include "modulos/404.php";

@@ -41,6 +41,49 @@
 	text-shadow: 4px 4px 1px #dadada;
 }
 
+.hero {
+	position: relative;
+}
+
+.hero h2 {
+	position: absolute;
+	bottom: 2rem;
+	right: 0;
+	background-color: #343A40;
+	font-weight: 900;
+	color: #ffffff;
+	font-size: 2.8rem;
+}
+
+.contenido-principal p {
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+}
+
+.registros {
+	transition: all .3s;
+}
+
+.registros:hover {
+	transform: translateY(-15px);
+}
+
+.registros a {
+	text-decoration: none;
+}
+
+.registros h3 {
+	color: #000;
+}
+
+.btnEventos {
+	margin-top: -50px;
+	margin-bottom: 30px;
+}
+aside {
+	border: 1px dotted #555555;
+}
+
 /*=============================================
 ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 =============================================*/
